@@ -11,3 +11,14 @@ Estudante
 
 Escolas
 |-> Cursos Oferecidos
+
+Controllers
+|-> Usuario
+  |-> Profile
+  |-> Seus Cursos
+|-> Empresas
+  |-> Buscar Empresas
+  |-> Ver requisitos
+|-> Escolas
+  |-> Buscar Escolas
+  |-> Ver cursos
