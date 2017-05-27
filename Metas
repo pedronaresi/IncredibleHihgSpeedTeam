@@ -1,0 +1,13 @@
+METAS MEIA NOITE
+Cadastro (Empresas, Estudante, Escolas)
+Empresas
+|-> Qualificações desejadas(caminhos)
+|-> Perfil buscado
+
+Estudante
+|-> Caminhos (oq deve cursar pra entrar numa empresa)
+|-> Qualificação
+|-> Empresa q quer entrar
+
+Escolas
+|-> Cursos Oferecidos
