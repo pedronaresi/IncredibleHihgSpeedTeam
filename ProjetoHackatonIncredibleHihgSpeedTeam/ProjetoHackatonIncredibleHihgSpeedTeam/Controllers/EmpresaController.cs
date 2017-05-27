@@ -25,5 +25,10 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             return View();
         }
 
+        public ActionResult Delete()
+        {
+            //redirect
+            return View();
+        }
     }
 }

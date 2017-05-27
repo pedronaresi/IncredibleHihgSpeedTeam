@@ -13,5 +13,23 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
         {
             return View();
         }
+
+        public ActionResult Lista()
+        {
+            //Listar todos as Empresas
+            return View();
+        }
+
+        public ActionResult Create()
+        {
+            //ViewBag.ID_Carreira = new SelectList(
+            return View();
+        }
+
+        public ActionResult Delete()
+        {
+            //redirect
+            return View();
+        }
     }
 }

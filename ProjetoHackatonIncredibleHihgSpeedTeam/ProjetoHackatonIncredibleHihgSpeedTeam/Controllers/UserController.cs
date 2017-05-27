@@ -23,5 +23,10 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
         {
             return View();
         }
+
+        public ActionResult Qualifications()
+        {
+            return View();
+        }
     }
 }
