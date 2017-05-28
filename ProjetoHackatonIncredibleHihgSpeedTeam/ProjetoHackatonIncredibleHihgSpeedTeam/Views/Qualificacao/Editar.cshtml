@@ -1,0 +1,15 @@
+﻿@model ProjetoHackatonIncredibleHihgSpeedTeam.Models.QualificaçaoMOD
+@{
+    ViewBag.Title = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Editar</h2>
+@using (Html.BeginForm("Atualizar", "Qualificacao", FormMethod.Post))
+{
+    @Html.Hidden("Codigo", Model.ID)
+    <div>
+        @Html.TextBoxFor(x => x.Nome, Model.Nome.Trim())
+    </div>
+    <input type="submit" name="cadastrar" value="Cadastrar" />
+}

@@ -1,4 +1,4 @@
-﻿
+﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.EmpresaMOD>
 @{
     ViewBag.Title = "Lista_Empresas";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -7,15 +7,29 @@
 <h2>Empresas procurando por você:</h2>
 
 <div class="container" id="lista_empresas_contratar">
-    <table class="table table-hover">
-        <tr>
-            <th>Empresa</th>
-            <th>Vaga</th>
-            <th>Qualificações</th>
-        </tr>
-        <tr>
-            
-        </tr>
+    <table class="table-responsive table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var empresa in Model)
+            {
+                <tr>
+                    <th></th>
+                    <th>@empresa.Nome</th>
+                    <th>Entrar em contato</th>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Empresas: @Model.Count()</td>
+            </tr>
+        </tfoot>
     </table>
 </div>
 

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.QualificaçaoMOD>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User's Profile</h2>
+
+
+   <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var qualificacao in Model)
+            {
+                <tr>
+                    <th>@qualificacao.ID</th>
+                    <th>@qualificacao.Nome</th>
+                    <th><a href="Deletar?Codigo=@qualificacao.ID" onclick="return confirm('Deseja realmente excluir?');">Deletar</a></th>
+                    <th><a href="Editar?Codigo=@qualificacao.ID">Editar</a></th>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4">Empresas: @Model.Count()</td>
+            </tr>
+        </tfoot>
+    </table>
