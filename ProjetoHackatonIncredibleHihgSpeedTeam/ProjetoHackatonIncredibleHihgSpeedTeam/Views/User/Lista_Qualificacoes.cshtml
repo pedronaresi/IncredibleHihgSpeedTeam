@@ -1,39 +1,35 @@
-﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.EmpresaMOD>
+﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.QualificaçaoMOD>
 @{
-    ViewBag.Title = "Vagas";
+    ViewBag.Title = "Qualificações";
     Layout = "~/Views/Shared/_Layout2.cshtml";
 }
-
 <div class="page-header">
-    <h1>Vagas disponíveis:</h1>
+    <h1>Qualificações disponíveis: </h1>
 </div>
 <div class="container" id="lista_empresas_contratar">
     <table class="table-responsive table table-striped custab">
         <thead>
             <tr>
                 <th></th>
-                <th>Empresa</th>
-                <th>Carreira</th>
+                <th>Qualificação</th>
                 <th></th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var empresa in Model)
+            @foreach (var quali in Model)
             {
                 <tr>
                     <th></th>
-                    <th>@empresa.Nome</th>
-                    <th><a href="Qualificaçao?Codigo=@empresa.Carreira.ID">@empresa.Carreira.Nome</a></th>
-                    <th><a href="#">Candidatar-se</a></th>
+                    <th>@quali.Nome</th>
+                    <th><a href="Buscar_Escolas?Codigo=@quali.ID">Não sou capacitado</a></th>
                 </tr>
             }
         </tbody>
         <tfoot>
             <tr>
-                <td colspan="4" class="text-center">Empresas: @Model.Count()</td>
+                <td colspan="3" class="text-center">Qualificações: @Model.Count()</td>
             </tr>
         </tfoot>
     </table>
 </div>
-
 <a href="#" onclick="history.go(-1);" class="btn">Voltar</a>

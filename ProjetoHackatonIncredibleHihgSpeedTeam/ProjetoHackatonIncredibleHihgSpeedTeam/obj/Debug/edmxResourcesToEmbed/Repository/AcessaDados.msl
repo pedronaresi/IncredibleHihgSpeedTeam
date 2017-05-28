@@ -63,6 +63,7 @@
     <EntitySetMapping Name="TB_USER">
       <EntityTypeMapping TypeName="DB_HACKATONModel.TB_USER">
         <MappingFragment StoreEntitySet="TB_USER">
+          <ScalarProperty Name="DS_SENHA" ColumnName="DS_SENHA" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
         </MappingFragment>

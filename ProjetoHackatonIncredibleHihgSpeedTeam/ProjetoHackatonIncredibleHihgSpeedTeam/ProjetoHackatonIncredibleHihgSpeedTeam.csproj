@@ -95,6 +95,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Pictures\Logo.png" />
     <Content Include="Content\Site.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -133,7 +134,6 @@
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Web.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Home\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -227,6 +227,16 @@
     <Content Include="Views\Qualificacao\Editar.cshtml" />
     <Content Include="Views\Qualificacao\Inserir.cshtml" />
     <Content Include="Views\Qualificacao\Lista.cshtml" />
+    <Content Include="Views\Home\Login.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\User\Lista_Escolas.cshtml" />
+    <Content Include="Views\User\Lista_Qualificacoes.cshtml" />
+    <Content Include="Views\User\Buscar_Escolas.cshtml" />
+    <Content Include="Views\Carreira\Editar.cshtml" />
+    <Content Include="Views\Carreira\Inserir.cshtml" />
+    <Content Include="Views\Carreira\Lista.cshtml" />
+    <Content Include="Views\User\Qualificaçao.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -236,7 +246,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Carreira\" />
     <Folder Include="Views\Escola\" />
   </ItemGroup>
   <ItemGroup>

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.QualificaçaoMOD>
+@{
+    ViewBag.Title = "Qualificação";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+    var nmVaga = ViewBag.nmVaga;
+}
+<div class="page-header">
+    <h1>Pré Requisitos para a vaga de @nmVaga:</h1>
+</div>
+<div class="container" id="">
+    <table class="table-responsive table table-striped custab">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var quali in Model)
+            {
+                <tr>
+                    <th></th>
+                    <th>@quali.Nome</th>
+                    <th><a href="Buscar_Escolas?Codigo=@quali.ID">Não sou capacitado</a></th>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="4" class="text-center">Qualificações: @Model.Count()</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<a href="#" onclick="history.go(-1);" class="btn btn-sm">Voltar</a>

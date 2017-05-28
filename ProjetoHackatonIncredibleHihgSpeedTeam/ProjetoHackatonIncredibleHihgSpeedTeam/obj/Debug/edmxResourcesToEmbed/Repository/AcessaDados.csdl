@@ -72,6 +72,7 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="NM_NOME" Type="String" MaxLength="20" FixedLength="true" Unicode="false" Nullable="false" />
     <NavigationProperty Name="TB_USER_QUALIFICACAO" Relationship="Self.FK_TB_USER_QUALIFICACAO_TB_USER" FromRole="TB_USER" ToRole="TB_USER_QUALIFICACAO" />
+    <Property Name="DS_SENHA" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
   </EntityType>
   <EntityType Name="TB_USER_QUALIFICACAO">
     <Key>

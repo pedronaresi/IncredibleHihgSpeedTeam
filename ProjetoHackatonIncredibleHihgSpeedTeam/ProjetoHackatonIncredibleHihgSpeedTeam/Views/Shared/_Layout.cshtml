@@ -1,9 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@model ProjetoHackatonIncredibleHihgSpeedTeam.Models.AlunoMOD
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>@ViewBag.Title - TiePlus</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <script src="~/Scripts/modernizr-2.6.2.js"></script>
@@ -16,18 +17,40 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>   
-                @Html.ActionLink("Hire Me", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </button>
+                @Html.ActionLink("TiePlus", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                        <li><a href="#">Perfil</a></li>
-                        <li><a href="#">Perfil</a></li>
-                        <li><a href="#">Page 2</a></li>
-                        <li><a href="#">Page 3</a></li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="/Home/Login"><span class="glyphicon glyphicon-login"></span> Login</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+                        <ul id="login-dp" class="dropdown-menu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        @using (Html.BeginForm("Logar", "Home", FormMethod.Post))
+                                        {
+                                            <div class="form-group">
+                                                <label class="sr-only">Usuário</label>
+                                                @Html.TextBoxFor(x => x.Nome, new { @class = "login-field", @placeholder = "username" })
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="sr-only">Senha</label>
+                                                @Html.TextBoxFor(x => x.Pass, new { @class = "login-field", @placeholder = "password", @type = "password" })
+                                                <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-primary btn-block">Logar</button>
+                                            </div>
+                                        }
+                                    </div>
+                                    <div class="bottom text-center">
+                                        <a href="#"><b>Cadastre-se</b></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -35,13 +58,14 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        <footer class="navbar-fixed-bottom">
+            <hr />
+            <div class="container-fluid">
+                <p>&copy; @DateTime.Now.Year - TiePlus</p>
+            </div>
         </footer>
     </div>
-
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-3.1.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 </body>
 </html>

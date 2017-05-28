@@ -58,6 +58,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="NM_NOME" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="DS_SENHA" Type="char" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="TB_USER_QUALIFICACAO">
     <Key>

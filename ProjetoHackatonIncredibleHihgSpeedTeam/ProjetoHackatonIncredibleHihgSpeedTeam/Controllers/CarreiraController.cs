@@ -3,27 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-<<<<<<< HEAD
-=======
 using ProjetoHackatonIncredibleHihgSpeedTeam.Repository;
 using ProjetoHackatonIncredibleHihgSpeedTeam.Models;
->>>>>>> 4967de737a9eac122a8744372d316030fca1fb31
 
 namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
 {
     public class CarreiraController : Controller
     {
         // GET: Carreira
-<<<<<<< HEAD
-=======
-        private CarreiraREP rep = new CarreiraREP();
->>>>>>> 4967de737a9eac122a8744372d316030fca1fb31
+        private CarreirasREP rep = new CarreirasREP();
         public ActionResult Index()
         {
             return View();
         }
-<<<<<<< HEAD
-=======
         public ActionResult Lista()
         {
             //Listar todos as Empresas
@@ -54,11 +46,6 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             return View();
         }
 
-        public ActionResult Editar(Int32 Codigo)
-        {
-            return View(rep.Selecionar(Codigo));
-        }
-
         [HttpPost]
         public ActionResult Atualizar(Int32 Codigo, String Nome)
         {
@@ -70,6 +57,5 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             rep.Atualizar(novo);
             return RedirectToAction("Lista");
         }
->>>>>>> 4967de737a9eac122a8744372d316030fca1fb31
     }
 }

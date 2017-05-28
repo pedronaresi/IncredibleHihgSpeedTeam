@@ -7,12 +7,8 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Models
 {
     public class AlunoMOD
     {
-        public AlunoMOD()
-        {
-            Carreira = new CarreiraMOD();
-        }
         public Int32 ID { get; set; }
         public String Nome{ get; set; }
-        public CarreiraMOD Carreira { get; set; }
+        public String Pass { get; set; }
     }
 }

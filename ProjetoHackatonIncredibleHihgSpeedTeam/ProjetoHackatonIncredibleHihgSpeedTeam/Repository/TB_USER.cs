@@ -22,6 +22,7 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Repository
     
         public int ID { get; set; }
         public string NM_NOME { get; set; }
+        public string DS_SENHA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TB_USER_QUALIFICACAO> TB_USER_QUALIFICACAO { get; set; }

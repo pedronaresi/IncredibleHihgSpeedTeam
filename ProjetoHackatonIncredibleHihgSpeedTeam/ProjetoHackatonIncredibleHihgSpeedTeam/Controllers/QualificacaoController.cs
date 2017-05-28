@@ -46,8 +46,6 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             return View();
         }
 
-       
-
         [HttpPost]
         public ActionResult Atualizar(Int32 Codigo, String Nome)
         {
