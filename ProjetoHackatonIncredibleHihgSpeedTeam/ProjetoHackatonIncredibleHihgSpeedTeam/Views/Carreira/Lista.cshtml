@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ProjetoHackatonIncredibleHihgSpeedTeam.Models.CarreiraMOD>
+@{
+    ViewBag.Title = "Lista";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lista</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var carreira in Model)
+        {
+            <tr>
+                <th>@carreira.ID</th>
+                <th>@carreira.Nome</th>
+                <th><a href="Deletar?Codigo=@carreira.ID" onclick="return confirm('Deseja realmente excluir?');">Deletar</a></th>
+                <th><a href="Editar?Codigo=@carreira.ID">Editar</a></th>
+            </tr>
+        }
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="4">Vagas: @Model.Count()</td>
+        </tr>
+    </tfoot>
+</table>
