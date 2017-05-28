@@ -1,0 +1,18 @@
+﻿<Properties StartupConfiguration="{EA01305C-C1A2-4DAD-BC1B-84335285A5BA}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProjetoHackatonIncredibleHihgSpeedTeam/Controllers/HomeController.cs">
+    <Files>
+      <File FileName="ProjetoHackatonIncredibleHihgSpeedTeam/Views/Home/Login.cshtml" Line="39" Column="8" />
+      <File FileName="ProjetoHackatonIncredibleHihgSpeedTeam/Content/Site.css" Line="19" Column="1" />
+      <File FileName="ProjetoHackatonIncredibleHihgSpeedTeam/Views/Shared/_Layout.cshtml" Line="47" Column="8" />
+      <File FileName="ProjetoHackatonIncredibleHihgSpeedTeam/Controllers/UserController.cs" Line="35" Column="1" />
+      <File FileName="ProjetoHackatonIncredibleHihgSpeedTeam/Controllers/HomeController.cs" Line="17" Column="27" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.ProjetoHackatonIncredibleHihgSpeedTeam PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
