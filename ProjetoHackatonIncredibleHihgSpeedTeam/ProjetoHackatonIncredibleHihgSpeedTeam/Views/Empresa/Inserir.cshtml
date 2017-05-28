@@ -1,0 +1,14 @@
+﻿@model ProjetoHackatonIncredibleHihgSpeedTeam.Models.EmpresaMOD
+@{
+    ViewBag.Title = "Inserir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Inserir</h2>
+@using (Html.BeginForm("Cadastrar", "Empresa", FormMethod.Post))
+{
+    <div>
+        @Html.TextBoxFor(x => x.Nome)
+    </div>
+    <input type="submit" name="cadastrar" value="Cadastrar" />
+}

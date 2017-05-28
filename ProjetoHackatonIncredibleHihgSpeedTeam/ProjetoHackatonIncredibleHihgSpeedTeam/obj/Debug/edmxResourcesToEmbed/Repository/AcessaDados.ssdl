@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_HACKATONModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TB_CARREIRA_QUALIFICA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_CARREIRA" Type="int" Nullable="false" />
+    <Property Name="ID_QUALIFICACAO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_CARREIRAS">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_NOME" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EMPRESA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_NOME" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_EMPRESA_CARREIRA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_EMPRESA" Type="int" Nullable="false" />
+    <Property Name="ID_CARREIRA" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ESCOLA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_NOME" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_ESCOLA_QUALIFICA">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_ESCOLA" Type="int" Nullable="false" />
+    <Property Name="ID_QUALIFICACAO" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_QUALIFICACAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_NOME" Type="char" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TB_USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NM_NOME" Type="char" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TB_USER_QUALIFICACAO">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_USER" Type="int" Nullable="false" />
+    <Property Name="ID_QUALIFICACAO" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_TB_CARREIRA_QUALIFICA_TB_CARREIRAS">
+    <End Role="TB_CARREIRAS" Type="Self.TB_CARREIRAS" Multiplicity="1" />
+    <End Role="TB_CARREIRA_QUALIFICA" Type="Self.TB_CARREIRA_QUALIFICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CARREIRAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_CARREIRA_QUALIFICA">
+        <PropertyRef Name="ID_CARREIRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_CARREIRA_QUALIFICA_TB_QUALIFICACAO">
+    <End Role="TB_QUALIFICACAO" Type="Self.TB_QUALIFICACAO" Multiplicity="1" />
+    <End Role="TB_CARREIRA_QUALIFICA" Type="Self.TB_CARREIRA_QUALIFICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_QUALIFICACAO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_CARREIRA_QUALIFICA">
+        <PropertyRef Name="ID_QUALIFICACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_EMPRESA_CARREIRA_TB_CARREIRAS">
+    <End Role="TB_CARREIRAS" Type="Self.TB_CARREIRAS" Multiplicity="1" />
+    <End Role="TB_EMPRESA_CARREIRA" Type="Self.TB_EMPRESA_CARREIRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_CARREIRAS">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_EMPRESA_CARREIRA">
+        <PropertyRef Name="ID_CARREIRA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_EMPRESA_CARREIRA_TB_EMPRESA">
+    <End Role="TB_EMPRESA" Type="Self.TB_EMPRESA" Multiplicity="1" />
+    <End Role="TB_EMPRESA_CARREIRA" Type="Self.TB_EMPRESA_CARREIRA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_EMPRESA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_EMPRESA_CARREIRA">
+        <PropertyRef Name="ID_EMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ESCOLA_QUALIFICA_TB_ESCOLA">
+    <End Role="TB_ESCOLA" Type="Self.TB_ESCOLA" Multiplicity="1" />
+    <End Role="TB_ESCOLA_QUALIFICA" Type="Self.TB_ESCOLA_QUALIFICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_ESCOLA">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_ESCOLA_QUALIFICA">
+        <PropertyRef Name="ID_ESCOLA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_ESCOLA_QUALIFICA_TB_QUALIFICACAO">
+    <End Role="TB_QUALIFICACAO" Type="Self.TB_QUALIFICACAO" Multiplicity="1" />
+    <End Role="TB_ESCOLA_QUALIFICA" Type="Self.TB_ESCOLA_QUALIFICA" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_QUALIFICACAO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_ESCOLA_QUALIFICA">
+        <PropertyRef Name="ID_QUALIFICACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_USER_QUALIFICACAO_TB_QUALIFICACAO">
+    <End Role="TB_QUALIFICACAO" Type="Self.TB_QUALIFICACAO" Multiplicity="1" />
+    <End Role="TB_USER_QUALIFICACAO" Type="Self.TB_USER_QUALIFICACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_QUALIFICACAO">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_USER_QUALIFICACAO">
+        <PropertyRef Name="ID_QUALIFICACAO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TB_USER_QUALIFICACAO_TB_USER">
+    <End Role="TB_USER" Type="Self.TB_USER" Multiplicity="1" />
+    <End Role="TB_USER_QUALIFICACAO" Type="Self.TB_USER_QUALIFICACAO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TB_USER">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="TB_USER_QUALIFICACAO">
+        <PropertyRef Name="ID_USER" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_HACKATONModelStoreContainer">
+    <EntitySet Name="TB_CARREIRA_QUALIFICA" EntityType="Self.TB_CARREIRA_QUALIFICA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_CARREIRAS" EntityType="Self.TB_CARREIRAS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EMPRESA" EntityType="Self.TB_EMPRESA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_EMPRESA_CARREIRA" EntityType="Self.TB_EMPRESA_CARREIRA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ESCOLA" EntityType="Self.TB_ESCOLA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ESCOLA_QUALIFICA" EntityType="Self.TB_ESCOLA_QUALIFICA" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_QUALIFICACAO" EntityType="Self.TB_QUALIFICACAO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER" EntityType="Self.TB_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_USER_QUALIFICACAO" EntityType="Self.TB_USER_QUALIFICACAO" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TB_CARREIRA_QUALIFICA_TB_CARREIRAS" Association="Self.FK_TB_CARREIRA_QUALIFICA_TB_CARREIRAS">
+      <End Role="TB_CARREIRAS" EntitySet="TB_CARREIRAS" />
+      <End Role="TB_CARREIRA_QUALIFICA" EntitySet="TB_CARREIRA_QUALIFICA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_CARREIRA_QUALIFICA_TB_QUALIFICACAO" Association="Self.FK_TB_CARREIRA_QUALIFICA_TB_QUALIFICACAO">
+      <End Role="TB_QUALIFICACAO" EntitySet="TB_QUALIFICACAO" />
+      <End Role="TB_CARREIRA_QUALIFICA" EntitySet="TB_CARREIRA_QUALIFICA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_EMPRESA_CARREIRA_TB_CARREIRAS" Association="Self.FK_TB_EMPRESA_CARREIRA_TB_CARREIRAS">
+      <End Role="TB_CARREIRAS" EntitySet="TB_CARREIRAS" />
+      <End Role="TB_EMPRESA_CARREIRA" EntitySet="TB_EMPRESA_CARREIRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_EMPRESA_CARREIRA_TB_EMPRESA" Association="Self.FK_TB_EMPRESA_CARREIRA_TB_EMPRESA">
+      <End Role="TB_EMPRESA" EntitySet="TB_EMPRESA" />
+      <End Role="TB_EMPRESA_CARREIRA" EntitySet="TB_EMPRESA_CARREIRA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ESCOLA_QUALIFICA_TB_ESCOLA" Association="Self.FK_TB_ESCOLA_QUALIFICA_TB_ESCOLA">
+      <End Role="TB_ESCOLA" EntitySet="TB_ESCOLA" />
+      <End Role="TB_ESCOLA_QUALIFICA" EntitySet="TB_ESCOLA_QUALIFICA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_ESCOLA_QUALIFICA_TB_QUALIFICACAO" Association="Self.FK_TB_ESCOLA_QUALIFICA_TB_QUALIFICACAO">
+      <End Role="TB_QUALIFICACAO" EntitySet="TB_QUALIFICACAO" />
+      <End Role="TB_ESCOLA_QUALIFICA" EntitySet="TB_ESCOLA_QUALIFICA" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_USER_QUALIFICACAO_TB_QUALIFICACAO" Association="Self.FK_TB_USER_QUALIFICACAO_TB_QUALIFICACAO">
+      <End Role="TB_QUALIFICACAO" EntitySet="TB_QUALIFICACAO" />
+      <End Role="TB_USER_QUALIFICACAO" EntitySet="TB_USER_QUALIFICACAO" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TB_USER_QUALIFICACAO_TB_USER" Association="Self.FK_TB_USER_QUALIFICACAO_TB_USER">
+      <End Role="TB_USER" EntitySet="TB_USER" />
+      <End Role="TB_USER_QUALIFICACAO" EntitySet="TB_USER_QUALIFICACAO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

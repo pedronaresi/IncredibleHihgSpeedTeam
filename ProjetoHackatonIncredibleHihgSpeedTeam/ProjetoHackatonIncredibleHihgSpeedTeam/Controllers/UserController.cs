@@ -11,21 +11,25 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
         // GET: User
         public ActionResult Index()
         {
+
             return View();
         }
 
         public ActionResult ListaEmpresas()
         {
+            //verificar qualificacoes do usuario e mostrar empresas de 75% pra cima
             return View();
         }
 
         public ActionResult ListaEscolas()
         {
+            //Listar escolas q fornecem os cursos nescessarios
             return View();
         }
 
-        public ActionResult Qualifications()
+        public ActionResult Perfil()
         {
+
             return View();
         }
     }

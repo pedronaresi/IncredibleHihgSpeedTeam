@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DB_HACKATONModelStoreContainer" CdmEntityContainer="DB_HACKATONEntities">
+    <EntitySetMapping Name="TB_CARREIRA_QUALIFICA">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_CARREIRA_QUALIFICA">
+        <MappingFragment StoreEntitySet="TB_CARREIRA_QUALIFICA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_CARREIRA" ColumnName="ID_CARREIRA" />
+          <ScalarProperty Name="ID_QUALIFICACAO" ColumnName="ID_QUALIFICACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_CARREIRAS">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_CARREIRAS">
+        <MappingFragment StoreEntitySet="TB_CARREIRAS">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EMPRESA">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_EMPRESA">
+        <MappingFragment StoreEntitySet="TB_EMPRESA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_EMPRESA_CARREIRA">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_EMPRESA_CARREIRA">
+        <MappingFragment StoreEntitySet="TB_EMPRESA_CARREIRA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_EMPRESA" ColumnName="ID_EMPRESA" />
+          <ScalarProperty Name="ID_CARREIRA" ColumnName="ID_CARREIRA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ESCOLA">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_ESCOLA">
+        <MappingFragment StoreEntitySet="TB_ESCOLA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_ESCOLA_QUALIFICA">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_ESCOLA_QUALIFICA">
+        <MappingFragment StoreEntitySet="TB_ESCOLA_QUALIFICA">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_ESCOLA" ColumnName="ID_ESCOLA" />
+          <ScalarProperty Name="ID_QUALIFICACAO" ColumnName="ID_QUALIFICACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_QUALIFICACAO">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_QUALIFICACAO">
+        <MappingFragment StoreEntitySet="TB_QUALIFICACAO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_USER">
+        <MappingFragment StoreEntitySet="TB_USER">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="NM_NOME" ColumnName="NM_NOME" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TB_USER_QUALIFICACAO">
+      <EntityTypeMapping TypeName="DB_HACKATONModel.TB_USER_QUALIFICACAO">
+        <MappingFragment StoreEntitySet="TB_USER_QUALIFICACAO">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ID_USER" ColumnName="ID_USER" />
+          <ScalarProperty Name="ID_QUALIFICACAO" ColumnName="ID_QUALIFICACAO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

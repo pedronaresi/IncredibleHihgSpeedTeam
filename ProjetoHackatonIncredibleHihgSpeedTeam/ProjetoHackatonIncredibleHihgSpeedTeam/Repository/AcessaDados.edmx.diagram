@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a17bde994d5b4e3f92c13e228d439dbc" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_CARREIRA_QUALIFICA" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_CARREIRAS" Width="1.5" PointX="0.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_EMPRESA" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_EMPRESA_CARREIRA" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_ESCOLA" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_ESCOLA_QUALIFICA" Width="1.5" PointX="3" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_QUALIFICACAO" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_USER" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_HACKATONModel.TB_USER_QUALIFICACAO" Width="1.5" PointX="3" PointY="6.875" IsExpanded="true" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_CARREIRA_QUALIFICA_TB_CARREIRAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_CARREIRA_QUALIFICA_TB_QUALIFICACAO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_EMPRESA_CARREIRA_TB_CARREIRAS" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_EMPRESA_CARREIRA_TB_EMPRESA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_ESCOLA_QUALIFICA_TB_ESCOLA" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_ESCOLA_QUALIFICA_TB_QUALIFICACAO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_USER_QUALIFICACAO_TB_QUALIFICACAO" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_HACKATONModel.FK_TB_USER_QUALIFICACAO_TB_USER" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -9,10 +9,10 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Models
     {
         public EmpresaMOD()
         {
-            ID_CARREIRA = new CarreiraMOD();
+            Carreira = new CarreiraMOD();
         }
         public Int32 ID { get; set; }
-        public String NM_NOME { get; set; }
-        public CarreiraMOD ID_CARREIRA{ get; set; }
+        public String Nome { get; set; }
+        public CarreiraMOD Carreira{ get; set; }
     }
 }

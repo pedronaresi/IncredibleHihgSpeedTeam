@@ -8,6 +8,6 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Models
     public class CarreiraMOD
     {
         public Int32 ID { get; set; }
-        public String NM_NOME { get; set; }
+        public String Nome { get; set; }
     }
 }
