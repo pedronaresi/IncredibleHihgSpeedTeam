@@ -15,7 +15,7 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             return View();
         }
 
-        public ActionResult ListaEmpresas()
+        public ActionResult Lista_Empresas()
         {
             //verificar qualificacoes do usuario e mostrar empresas de 75% pra cima
             return View();
@@ -30,6 +30,11 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
         public ActionResult Perfil()
         {
 
+            return View();
+        }
+
+        public ActionResult Perfil()
+        {
             return View();
         }
     }
