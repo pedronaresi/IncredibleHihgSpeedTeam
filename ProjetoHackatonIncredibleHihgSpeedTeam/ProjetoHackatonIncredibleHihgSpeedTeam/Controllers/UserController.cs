@@ -14,7 +14,7 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
             return View();
         }
 
-        public ActionResult ListaEmpresas()
+        public ActionResult Lista_Empresas()
         {
             return View();
         }
