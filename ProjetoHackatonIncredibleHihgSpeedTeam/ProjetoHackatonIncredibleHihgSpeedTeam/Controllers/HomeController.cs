@@ -19,6 +19,7 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
 		{
 			return View();
 		}
+
         [HttpPost]
         public ActionResult Logar(String Nome, String Pass)
         {
@@ -35,7 +36,7 @@ namespace ProjetoHackatonIncredibleHihgSpeedTeam.Controllers
 
                 }
             }
-            return RedirectToAction("Login");
+            return RedirectToAction("Index");
         }
     }
 }
